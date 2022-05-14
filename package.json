@@ -1,0 +1,25 @@
+{
+  "name": "generate-ogp",
+  "version": "1.0.0",
+  "description": "this is an application generates ogp(open graph protocol)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen": "ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zawa1205/generate-ogp.git"
+  },
+  "author": "zawa1205",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zawa1205/generate-ogp/issues"
+  },
+  "homepage": "https://github.com/zawa1205/generate-ogp#readme",
+  "dependencies": {
+    "puppeteer": "^14.1.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
