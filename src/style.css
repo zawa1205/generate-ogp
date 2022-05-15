@@ -1,12 +1,15 @@
 body {
     margin: 0;
     color: #383838;
+    /* 文字色を白にする場合、上をコメントアウトし下のコメントを解除 */
+    /* color: #fff; */
 }
 p {
     margin: 0;
     padding: 0 30px 30px 30px;
     white-space: pre-wrap;
     text-align: center;
+    z-index: 1;
 }
 
 #img-wrapper {
@@ -20,6 +23,17 @@ p {
     position: relative;
 }
 
+/* 文字色を白にする場合、以下のコメントアウトを解除で背景画像を暗くする */
+/* #img-wrapper::before{
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+} */
+
 .author-wrapper {
     display: flex;
     position: absolute;
@@ -29,6 +43,8 @@ p {
 .author-wrapper > img {
     padding-top: 5px;
     filter: invert(22%);
+    /* 文字色を白にする場合、上をコメントアウトし下のコメントを解除 */
+    /* filter: invert(100%); */
 }
 .author-text {
     white-space: nowrap;
