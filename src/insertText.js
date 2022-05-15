@@ -26,7 +26,7 @@ eval("\nvar jsonData = __webpack_require__(/*! ./title.json */ \"./src/title.jso
   \************************/
 /***/ ((module) => {
 
-eval("module.exports = JSON.parse('{\"title\":\"【AWS CLF】　クラウドプラクティショナーを　0から２週間で受かった　勉強方法を伝えたい！\"}');\n\n//# sourceURL=webpack://generate-ogp/./src/title.json?");
+eval("module.exports = JSON.parse('{\"title\":\"【AWS CLF】　クラウドの　解決方法３選\"}');\n\n//# sourceURL=webpack://generate-ogp/./src/title.json?");
 
 /***/ })
 

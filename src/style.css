@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    color: #4f524d;
+    color: #383838;
 }
 p {
     margin: 0;
@@ -28,11 +28,11 @@ p {
 }
 .author-wrapper > img {
     padding-top: 5px;
-    filter: invert(32%);
+    filter: invert(22%);
 }
 .author-text {
     white-space: nowrap;
-    padding: 0 20px 20px 10px;
+    padding: 0 30px 20px 10px;
     font-size: 32px;
 }
 
