@@ -1,11 +1,10 @@
-const fs = require('fs/promises');
-const puppeteer = require('puppeteer');
-const path = require('path');
-const json = require('./title.json')
+const fs = require('fs/promises')
+const puppeteer = require('puppeteer')
+const path = require('path')
+const json = require('./thumbnail.json')
 
 const runPuppeteer = function() {
     (async () => {
-        // TODO: headless: trueだと画像が保存されない
         const browser = await puppeteer.launch({ headless: true, })
         const page = (await browser.pages())[0]
         page.setViewport({ width: 1200, height: 630 })
@@ -17,6 +16,6 @@ const runPuppeteer = function() {
         await page.screenshot({path: outPath})
 
         await browser.close()
-    })();
+    })()
 }
 runPuppeteer()

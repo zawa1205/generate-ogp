@@ -1,9 +1,12 @@
-const jsonData = require('./title.json')
+const jsonData = require('./thumbnail.json')
 
 const wrapperElement: any = document.getElementById('img-wrapper')
 const textElement: any = document.createElement('p')
 const titleText: any = jsonData.title
+const authorText: any = jsonData.author.github
 const spaceCount = (titleText.match( /　/g ) || []).length
+
+// TODO: 今後デザイン崩れが発生した場合、行ごとにスタイルを適応
 if( spaceCount === 0) {
     textElement.classList.add('one-line')
 }
@@ -14,6 +17,7 @@ else if(spaceCount === 1) {
 } else {
     textElement.classList.add('four-lines')
 }
+
 const formatText = titleText.replace(/　/g, '\n')
 textElement.textContent = formatText
 
@@ -29,7 +33,7 @@ imgElement.height = 40
 authorElement.appendChild(imgElement)
 // 著名
 const authorTextElement: any = document.createElement('p')
-authorTextElement.textContent = 'zawa1205'
+authorTextElement.textContent = authorText
 authorTextElement.classList.add('author-text')
 authorElement.appendChild(authorTextElement)
 

@@ -16,17 +16,17 @@
   \***************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\nvar jsonData = __webpack_require__(/*! ./title.json */ \"./src/title.json\");\nvar wrapperElement = document.getElementById('img-wrapper');\nvar textElement = document.createElement('p');\nvar titleText = jsonData.title;\nvar spaceCount = (titleText.match(/　/g) || []).length;\nif (spaceCount === 0) {\n    textElement.classList.add('one-line');\n}\nelse if (spaceCount === 1) {\n    textElement.classList.add('two-lines');\n}\nelse if (spaceCount === 2) {\n    textElement.classList.add('three-lines');\n}\nelse {\n    textElement.classList.add('four-lines');\n}\nvar formatText = titleText.replace(/　/g, '\\n');\ntextElement.textContent = formatText;\nwrapperElement.appendChild(textElement);\nvar authorElement = document.createElement('div');\nauthorElement.classList.add('author-wrapper');\n// 画像\nvar imgElement = document.createElement('img');\nimgElement.src = 'github.png';\nimgElement.width = 40;\nimgElement.height = 40;\nauthorElement.appendChild(imgElement);\n// 著名\nvar authorTextElement = document.createElement('p');\nauthorTextElement.textContent = 'zawa1205';\nauthorTextElement.classList.add('author-text');\nauthorElement.appendChild(authorTextElement);\nwrapperElement.appendChild(authorElement);\n\n\n//# sourceURL=webpack://generate-ogp/./src/insertText.ts?");
+eval("\nvar jsonData = __webpack_require__(/*! ./thumbnail.json */ \"./src/thumbnail.json\");\nvar wrapperElement = document.getElementById('img-wrapper');\nvar textElement = document.createElement('p');\nvar titleText = jsonData.title;\nvar authorText = jsonData.author.github;\nvar spaceCount = (titleText.match(/　/g) || []).length;\n// TODO: 今後デザイン崩れが発生した場合、行ごとにスタイルを適応\nif (spaceCount === 0) {\n    textElement.classList.add('one-line');\n}\nelse if (spaceCount === 1) {\n    textElement.classList.add('two-lines');\n}\nelse if (spaceCount === 2) {\n    textElement.classList.add('three-lines');\n}\nelse {\n    textElement.classList.add('four-lines');\n}\nvar formatText = titleText.replace(/　/g, '\\n');\ntextElement.textContent = formatText;\nwrapperElement.appendChild(textElement);\nvar authorElement = document.createElement('div');\nauthorElement.classList.add('author-wrapper');\n// 画像\nvar imgElement = document.createElement('img');\nimgElement.src = 'github.png';\nimgElement.width = 40;\nimgElement.height = 40;\nauthorElement.appendChild(imgElement);\n// 著名\nvar authorTextElement = document.createElement('p');\nauthorTextElement.textContent = authorText;\nauthorTextElement.classList.add('author-text');\nauthorElement.appendChild(authorTextElement);\nwrapperElement.appendChild(authorElement);\n\n\n//# sourceURL=webpack://generate-ogp/./src/insertText.ts?");
 
 /***/ }),
 
-/***/ "./src/title.json":
-/*!************************!*\
-  !*** ./src/title.json ***!
-  \************************/
+/***/ "./src/thumbnail.json":
+/*!****************************!*\
+  !*** ./src/thumbnail.json ***!
+  \****************************/
 /***/ ((module) => {
 
-eval("module.exports = JSON.parse('{\"title\":\"【AWS CLF】　クラウドの　解決方法３選\"}');\n\n//# sourceURL=webpack://generate-ogp/./src/title.json?");
+eval("module.exports = JSON.parse('{\"title\":\"ここにタイトルを入力　全角スペースが　改行になります\",\"author\":{\"github\":\"zawa1205(変更ご自由に)\"}}');\n\n//# sourceURL=webpack://generate-ogp/./src/thumbnail.json?");
 
 /***/ })
 
