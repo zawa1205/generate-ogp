@@ -1,9 +1,10 @@
 body {
     margin: 0;
+    color: #4f524d;
 }
 p {
     margin: 0;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     white-space: pre-wrap;
     text-align: center;
 }
@@ -27,6 +28,7 @@ p {
 }
 .author-wrapper > img {
     padding-top: 5px;
+    filter: invert(32%);
 }
 .author-text {
     white-space: nowrap;
@@ -34,6 +36,7 @@ p {
     font-size: 32px;
 }
 
+/* TODO: 行数によってサイズ等変更する必要が出てきたら改良 */
 .one-line {
     font-size: 80px;
 }
@@ -47,3 +50,21 @@ p {
     font-size: 80px;
 }
 
+/* フォント追加 */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/NotoSansJP/NotoSansJP-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/NotoSansJP/NotoSansJP-Bold.woff') format('woff');
+}
+
+body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-weight: bold;
+}
